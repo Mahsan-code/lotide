@@ -7,10 +7,10 @@ const asserEqual = function(actual, expected) {
     }
   };
 
-  const eqArray = function(array_One, array_two){
+  const eqArray = function(arrayOne, arrayTwo){
 
-    return Array.isArray(array_One) && Array.isArray(array_two) &&
-    array_One.length === array_two.length && array_One.every((val, index) => val ===array_two[index]);
+    return Array.isArray(arrayOne) && Array.isArray(arrayTwo) &&
+    arrayOne.length === arrayTwo.length && arrayOne.every((val, index) => val ===arrayTwo[index]);
   }
 
   let result = eqArray(["1", "2", "3"], ["1", "2", 3])
