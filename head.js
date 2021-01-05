@@ -1,15 +1,19 @@
-const asserEqual = function(array, firstElement) {
-    
-    arrayIndexZero =array[0];
+const asserEqual = function(actual, expected) {
 
-    
-
-    if (arrayIndexZero === firstElement) {
-      console.log(`Assertion Passed: ${arrayIndexZero } === ${firstElement}`);
+    if (actual === expected) {
+      console.log(`Assertion Passed: ${actual} === ${expected}`);
     } else {
-      console.log(`Assertion Failed:  ${arrayIndexZero} !== ${firstElement}`);
+      console.log(`Assertion Failed:  ${actual}!==${expected}`);
     }
   };
-  
-  asserEqual([4,5,8], 4);
-  asserEqual(['a','e','g'], 'a');
+
+
+
+const head = function(array) {
+    
+    arrayIndexZero = array[0];
+    return arrayIndexZero;
+};
+    
+const result = head([4,5,9,3,6]);
+asserEqual(result, 4);

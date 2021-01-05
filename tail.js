@@ -1,11 +1,17 @@
 const asserEqual = function(actual, expected) {
-    let tailArray = actual.slice(1); 
-    
-    if (actual.length === tailArray.length) {
-      console.log(`Assertion Failed: length ${actual} and ${tailArray} shoudnt be equal`);
+
+    if (actual === expected) {
+      console.log(`Assertion Passed: ${actual} === ${expected}`);
     } else {
-      console.log(`Assertion Passed:  length ${actual}!== length${expected}`);
+      console.log(`Assertion Failed:  ${actual}!==${expected}`);
     }
   };
-  
-   asserEqual([1,6,8,9] , [6,8,9]);
+
+  const tail = function(array){
+      return array.slice(1);
+  }
+
+const result = tail([5,9,7,6,3]);
+asserEqual(result, [9,7,6,3]);
+asserEqual(result.length, 5);
+
