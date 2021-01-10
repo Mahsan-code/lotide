@@ -11,7 +11,7 @@ const asserEqual = function(actual, expected) {
       return array.slice(1);
   }
 
-const result = tail([5,9,7,6,3]);
-asserEqual(result, [9,7,6,3]);
-asserEqual(result.length, 5);
+
+
+ module.exports = tail;
 
