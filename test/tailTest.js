@@ -1,6 +1,12 @@
-const tail = require('../tail');
-const assertEqual = require('../assertEqual');
+const assert = require('chai').assert;
+const tail   = require('../tail');
 
-const result = tail([5,9,7,6,3]);
-assertEqual(result, [9,7,6,3]);
-assertEqual(result.length, 5);
+describe('#tail', ()=>{
+    it("returns [9,7,6,3] for [5,9,7,6,3]", () => {
+        assert.deepEqual(tail([5,9,7,6,3]), [9,7,6,3]);
+      });
+
+    
+
+
+});
