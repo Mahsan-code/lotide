@@ -1,12 +1,12 @@
-const asserEqual = function(actual, expected) {
+// const asserEqual = function(actual, expected) {
 
-    if (actual === expected) {
-      console.log(`Assertion Passed: ${actual} === ${expected}`);
-    } else {
-      console.log(`Assertion Failed:  ${actual}!==${expected}`);
-    }
-  };
-
+//     if (actual === expected) {
+//       console.log(`Assertion Passed: ${actual} === ${expected}`);
+//     } else {
+//       console.log(`Assertion Failed:  ${actual}!==${expected}`);
+//     }
+//   };
+const assertEqual = require('./assertEqual');
 
 
 const head = function(array) {
@@ -15,5 +15,6 @@ const head = function(array) {
     return arrayIndexZero;
 };
     
-const result = head([4,5,9,3,6]);
-asserEqual(result, 4);
+
+
+module.exports = head;
